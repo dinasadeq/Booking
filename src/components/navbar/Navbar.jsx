@@ -1,15 +1,23 @@
+import { Link } from "react-router-dom";
 import "./navbar.css";
 const Navbar = () => {
-    return (
-        <div className="navbar">
-        <div className="navContainer">
-          <span className="logo"> lamabooking </span>
-          <div className="navItems">
-            <button className="navButton">Register</button>
-            <button className="navButton">Login</button>
-          </div>
+  return (
+    <div className="navbar">
+      <div className="navContainer">
+        <span className="logo"> lamabooking </span>
+        <div className="navItems">
+          <Link
+            to="/hotels"
+            state={{ destination: "btats" }}
+            style={{ color: "white" }}
+          >
+            Hotels
+          </Link>
+          <button className="navButton">Register</button>
+          <button className="navButton">Login</button>
         </div>
       </div>
-    );
-  };
-  export default Navbar;
+    </div>
+  );
+};
+export default Navbar;
